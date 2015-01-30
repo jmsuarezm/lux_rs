@@ -67,7 +67,7 @@ function findAnnounces($strDataDom){
             $strDataUTF = iconv('UTF-8', 'ASCII//TRANSLIT', $strData);
             //the function will transfor the string into a json object and store it in the database
             //storeJson($strDataUTF);
-printf (%s, $strDataUTF);
+print($strDataUTF);
         }
     }
 }
