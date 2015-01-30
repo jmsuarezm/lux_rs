@@ -26,7 +26,7 @@
 ?>
 
 <?php
-require 'scraperwiki.php'
+require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 ini_set('max_execution_time', 600);
 setlocale(LC_ALL, 'fr_FR.UTF8');
