@@ -80,10 +80,12 @@ function storeJson($strData){
     //if the decode ended with no error
     if (json_last_error() === JSON_ERROR_NONE) { 
         $record["id"] = $jsonVar -> id;
-        $record["modifdate"] = $jsonVar -> modifdate;
+$record["submitter"] = $jsonVar -> submitter;
+        $record["modification_date"] = $jsonVar -> modifdate;
         $record["inserted"] = $jsonVar -> inserted;
         $record["immotype"] = $jsonVar -> immotype;
         $record["price"] = $jsonVar -> price;
+$record["rent"] = $jsonVar -> rent;
         $record["commission"] = $jsonVar -> commission;
         $record["location"] = $jsonVar -> location;
         $record["country"] = $jsonVar -> country;
@@ -142,7 +144,7 @@ function storeJson($strData){
         $record["thermal_insulation_class"] = $jsonVar -> thermal_insulation_class;
         $record["delivery_date"] = $jsonVar -> delivery_date;
         $record["basement"] = $jsonVar -> basement;
-        $record["premium_property"] = $jsonVar -> premium_property;
+        $record["premium"] = $jsonVar -> premium;
         $record["status_banner"] = $jsonVar -> status_banner;
         $record["heat_pump"] = $jsonVar -> heat_pump;
         $record["geothermal"] = $jsonVar -> geothermal;
