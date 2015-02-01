@@ -154,7 +154,7 @@ $record["rent"] = $jsonVar -> rent;
         $record["range_price_max"] = $jsonVar -> range_price -> max;
         
         //save the record
-        scraperwiki::save(array('id'), $record);
+        scraperwiki::save_sqlite(array('id'), $record);
     }    
 } 
 
