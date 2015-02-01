@@ -81,7 +81,7 @@ function storeJson($strData){
     if (json_last_error() === JSON_ERROR_NONE) { 
         $record["id"] = $jsonVar -> id;
 $record["submitter"] = $jsonVar -> submitter;
-        $record["modification_date"] = $jsonVar -> modifdate;
+        $record["modification_date"] = $jsonVar -> modification_date;
         $record["inserted"] = $jsonVar -> inserted;
         $record["immotype"] = $jsonVar -> immotype;
         $record["price"] = $jsonVar -> price;
