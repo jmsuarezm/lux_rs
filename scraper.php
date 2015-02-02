@@ -33,7 +33,7 @@ setlocale(LC_ALL, 'fr_FR.UTF8');
 
 //the firt time, we set manually the first page
 //$value = "/recherche/resultats/map/Centre/tr/by";
-$value = "/recherche/resultats/fu/0/tr/by/md/0/w/a,Strassen";
+$value = "/recherche/resultats/fu/0/tr/by/ro/15/md/0/w/a,Strassen";
 //if $value is a valid page
 while ($value != "") {
     $htmlCentre = scraperWiki::scrape("http://www.athome.lu" . $value);
