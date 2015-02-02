@@ -156,8 +156,8 @@ function storeJson($strData){
         //save the record
         //scraperwiki::save_sqlite(array('id'), $record);
         print ($record["id"]);
-        //scraperwiki::save_sqlite(array('id'), $record);
-        ScraperWiki::save_sqlite(unique_keys=["id"], data={"id"=>$record["id"], "price"=>$record["price"]})     
+        ScraperWiki::save_sqlite(array('id'), $record);
+        //ScraperWiki::save_sqlite(unique_keys=["id"], data={"id"=>$record["id"], "price"=>$record["price"]})     
     }    
 } 
 
