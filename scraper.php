@@ -32,7 +32,8 @@ ini_set('max_execution_time', 600);
 setlocale(LC_ALL, 'fr_FR.UTF8');
 
 //the firt time, we set manually the first page
-$value = "/recherche/resultats/map/Centre/tr/by";
+//$value = "/recherche/resultats/map/Centre/tr/by";
+$value = "/recherche/resultats/fu/0/tr/by/md/0/w/a,Strassen";
 //if $value is a valid page
 while ($value != "") {
     $htmlCentre = scraperWiki::scrape("http://www.athome.lu" . $value);
@@ -67,7 +68,6 @@ function findAnnounces($strDataDom){
             $strDataUTF = iconv('UTF-8', 'ASCII//TRANSLIT', $strData);
             //the function will transfor the string into a json object and store it in the database
             storeJson($strDataUTF);
-//print($strDataUTF);
         }
     }
 }
@@ -154,7 +154,8 @@ $record["rent"] = $jsonVar -> rent;
         $record["range_price_max"] = $jsonVar -> range_price -> max;
         
         //save the record
-        scraperwiki::save_sqlite(array('id'), $record);
+        //scraperwiki::save_sqlite(array('id'), $record);
+        print ($record["id"]);
     }    
 } 
 
