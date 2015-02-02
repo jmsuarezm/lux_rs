@@ -156,6 +156,7 @@ $record["rent"] = $jsonVar -> rent;
         //save the record
         //scraperwiki::save_sqlite(array('id'), $record);
         print ($record["id"]);
+        scraperwiki::save_sqlite(array('id'), $record);
     }    
 } 
 
