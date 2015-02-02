@@ -80,12 +80,12 @@ function storeJson($strData){
     //if the decode ended with no error
     if (json_last_error() === JSON_ERROR_NONE) { 
         $record["id"] = $jsonVar -> id;
-		//$record["submitter"] = $jsonVar -> submitter;
+	//$record["submitter"] = $jsonVar -> submitter;
         //$record["modification_date"] = $jsonVar -> modification_date;
         //$record["inserted"] = $jsonVar -> inserted;
         //$record["immotype"] = $jsonVar -> immotype;
         $record["price"] = $jsonVar -> price;
-		$record["rent"] = $jsonVar -> rent;
+	//$record["rent"] = $jsonVar -> rent;
         //$record["commission"] = $jsonVar -> commission;
         //$record["location"] = $jsonVar -> location;
         //$record["country"] = $jsonVar -> country;
@@ -156,7 +156,8 @@ function storeJson($strData){
         //save the record
         //scraperwiki::save_sqlite(array('id'), $record);
         print ($record["id"]);
-        scraperwiki::save_sqlite(array('id'), $record);
+        //scraperwiki::save_sqlite(array('id'), $record);
+        ScraperWiki::save_sqlite(unique_keys=["id"], data={"id"=>$record["id"], "price"=>$record["price"]})     
     }    
 } 
 
