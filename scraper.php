@@ -86,10 +86,10 @@ function storeJson($strData){
         $record["immotype"] = $jsonVar -> immotype;
         $record["price"] = $jsonVar -> price;
 	$record["rent"] = $jsonVar -> rent;
-        $record["commission"] = $jsonVar -> commission;
+        //$record["commission"] = $jsonVar -> commission;
         $record["location"] = $jsonVar -> location;
-        $record["country"] = $jsonVar -> country;
-        $record["region"] = $jsonVar -> region;
+        //$record["country"] = $jsonVar -> country;
+        //$record["region"] = $jsonVar -> region;
         //$record["address"] = $jsonVar -> address;
         //$record["postal_code"] = $jsonVar -> postal_code;
         //$record["floor"] = $jsonVar -> floor;
@@ -135,7 +135,7 @@ function storeJson($strData){
         //$record["heating"] = $jsonVar -> heating;
         //$record["building_start"] = $jsonVar -> building_start;
         //$record["building_end"] = $jsonVar -> building_end;
-        $record["area"] = $jsonVar -> area;
+        //$record["area"] = $jsonVar -> area;
         $record["city"] = $jsonVar -> city;
         $record["price_by_m2"] = $jsonVar -> price_by_m2;
         //$record["lift"] = $jsonVar -> lift;
