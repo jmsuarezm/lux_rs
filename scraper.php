@@ -154,7 +154,8 @@ function storeJson($strData){
         //$record["range_price_max"] = $jsonVar -> range_price -> max;
         
         //save the record
-        print ($record);
+        //print ($record['id']);
+        print_r ($record);
         //ScraperWiki::save_sqlite(array('id'), $record);
     }    
 } 
