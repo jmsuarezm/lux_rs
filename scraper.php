@@ -36,7 +36,7 @@ setlocale(LC_ALL, 'fr_FR.UTF8');
 $value = "/recherche/resultats/fu/0/tr/by/md/0/w/a,Strassen/b/1/ig/h";
 //if $value is a valid page
 
-print_r(scraperwiki::select("* from data"));
+print_r(scraperwiki::delete("from data"));
 
 while ($value != "") {
     $htmlCentre = scraperWiki::scrape("http://www.athome.lu" . $value);
