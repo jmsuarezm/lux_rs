@@ -36,7 +36,9 @@ setlocale(LC_ALL, 'fr_FR.UTF8');
 $value = "/recherche/resultats/fu/0/tr/by/md/0/w/a,Strassen/b/1/ig/h";
 //if $value is a valid page
 
-print_r(scraperwiki::sqliteexecute("select * from swdata"));  
+$info = scraperwiki::table_info($name="swdata");           
+foreach ($info as $i=>$column)
+    print_r($column->name +" "+ $column->type);
 
 while ($value != "") {
     $htmlCentre = scraperWiki::scrape("http://www.athome.lu" . $value);
