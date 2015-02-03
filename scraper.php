@@ -154,12 +154,12 @@ function storeJson($strData){
         //$record["range_price_max"] = $jsonVar -> range_price -> max;
         
         //save the record
-        if ($record["price"] <> 0 or $record["price"] <> 0) {
+        //if ($record["price"] <> 0 or $record["price"] <> 0) {
            print ($record['id']);
            //print_r ($record);
-           ScraperWiki::save_sqlite(array('id'), $record);
-           print("saved");
-        }
+           print(ScraperWiki::save_sqlite(array('id'), $record));
+           //print("saved");
+        //}
     }    
 } 
 
