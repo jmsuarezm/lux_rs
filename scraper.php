@@ -33,7 +33,7 @@ setlocale(LC_ALL, 'fr_FR.UTF8');
 
 //the firt time, we set manually the first page
 //$value = "/recherche/resultats/map/Centre/tr/by";
-$value = "/recherche/resultats/fu/0/tr/by/md/0/w/a,Strassen";
+$value = "/recherche/resultats/fu/0/tr/by/md/0/w/a,Strassen/b/1/ig/h";
 //if $value is a valid page
 while ($value != "") {
     $htmlCentre = scraperWiki::scrape("http://www.athome.lu" . $value);
@@ -155,7 +155,7 @@ function storeJson($strData){
         
         //save the record
         if ($record["price"] <> 0 or $record["price"] <> 0) {
-        //print ($record['id']);
+        print ($record['id']);
         //print_r ($record);
         ScraperWiki::save_sqlite(array('id'), $record);
         }
