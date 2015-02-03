@@ -156,8 +156,8 @@ function storeJson($strData){
         //save the record
         if ($record["price"] <> 0 or $record["price"] <> 0) {
         //print ($record['id']);
-        print_r ($record);
-        //ScraperWiki::save_sqlite(array('id'), $record);
+        //print_r ($record);
+        ScraperWiki::save_sqlite(array('id'), $record);
         }
     }    
 } 
