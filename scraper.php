@@ -35,6 +35,9 @@ setlocale(LC_ALL, 'fr_FR.UTF8');
 //$value = "/recherche/resultats/map/Centre/tr/by";
 $value = "/recherche/resultats/fu/0/tr/by/md/0/w/a,Strassen/b/1/ig/h";
 //if $value is a valid page
+
+print_r(scraperwiki::sqliteexecute("select * from swdata"));  
+
 while ($value != "") {
     $htmlCentre = scraperWiki::scrape("http://www.athome.lu" . $value);
     $domCentre = new simple_html_dom();
@@ -67,7 +70,7 @@ function findAnnounces($strDataDom){
             //is it UTF format? just in case we convert it   
             $strDataUTF = iconv('UTF-8', 'ASCII//TRANSLIT', $strData);
             //the function will transfor the string into a json object and store it in the database
-            storeJson($strDataUTF);
+            //storeJson($strDataUTF);
         }
     }
 }
@@ -157,7 +160,8 @@ function storeJson($strData){
         //if ($record["price"] <> 0 or $record["price"] <> 0) {
            print ($record['id']);
            //print_r ($record);
-           print(ScraperWiki::save_sqlite(array('id'), $record));
+           scraperwiki::save_sqlite(array('id'), $record);
+           scraperwiki::sqlitecommit();
            //print("saved");
         //}
     }    
