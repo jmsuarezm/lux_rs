@@ -80,20 +80,20 @@ function storeJson($strData){
     //if the decode ended with no error
     if (json_last_error() === JSON_ERROR_NONE) { 
         $record["id"] = $jsonVar -> id;
-	$record["submitter"] = $jsonVar -> submitter;
+		//$record["submitter"] = $jsonVar -> submitter;
         //$record["modification_date"] = $jsonVar -> modification_date;
-        $record["inserted"] = $jsonVar -> inserted;
-        $record["immotype"] = $jsonVar -> immotype;
-        $record["price"] = $jsonVar -> price;
-	$record["rent"] = $jsonVar -> rent;
+        	//$record["inserted"] = $jsonVar -> inserted;
+        	//$record["immotype"] = $jsonVar -> immotype;
+        	//$record["price"] = $jsonVar -> price;
+		//$record["rent"] = $jsonVar -> rent;
         //$record["commission"] = $jsonVar -> commission;
-        $record["location"] = $jsonVar -> location;
+        	//$record["location"] = $jsonVar -> location;
         //$record["country"] = $jsonVar -> country;
         //$record["region"] = $jsonVar -> region;
         //$record["address"] = $jsonVar -> address;
         //$record["postal_code"] = $jsonVar -> postal_code;
         //$record["floor"] = $jsonVar -> floor;
-        $record["surface"] = $jsonVar -> surface;
+        	//$record["surface"] = $jsonVar -> surface;
         //$record["ground_surface"] = $jsonVar -> ground_surface;
         //$record["superficieTerrain"] = $jsonVar -> superficieTerrain;
         //$record["bedrooms_num"] = $jsonVar -> bedrooms_num;
@@ -136,8 +136,8 @@ function storeJson($strData){
         //$record["building_start"] = $jsonVar -> building_start;
         //$record["building_end"] = $jsonVar -> building_end;
         //$record["area"] = $jsonVar -> area;
-        $record["city"] = $jsonVar -> city;
-        $record["price_by_m2"] = $jsonVar -> price_by_m2;
+        	//$record["city"] = $jsonVar -> city;
+        	//$record["price_by_m2"] = $jsonVar -> price_by_m2;
         //$record["lift"] = $jsonVar -> lift;
         //$record["energy_class"] = $jsonVar -> energy_class;
         //$record["ground_contract"] = $jsonVar -> ground_contract;
@@ -155,9 +155,9 @@ function storeJson($strData){
         
         //save the record
         if ($record["price"] <> 0 or $record["price"] <> 0) {
-        print ($record['id']);
-        //print_r ($record);
-        ScraperWiki::save_sqlite(array('id'), $record);
+           print ($record['id']);
+           //print_r ($record);
+           print(ScraperWiki::save_sqlite(array('id'), $record));
         }
     }    
 } 
