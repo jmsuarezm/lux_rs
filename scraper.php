@@ -81,7 +81,7 @@ function storeJson($strData){
     if (json_last_error() === JSON_ERROR_NONE) { 
         $record["id"] = $jsonVar -> id;
 	$record["submitter"] = $jsonVar -> submitter;
-        $record["modification_date"] = $jsonVar -> modification_date;
+        //$record["modification_date"] = $jsonVar -> modification_date;
         $record["inserted"] = $jsonVar -> inserted;
         $record["immotype"] = $jsonVar -> immotype;
         $record["price"] = $jsonVar -> price;
@@ -93,7 +93,7 @@ function storeJson($strData){
         //$record["address"] = $jsonVar -> address;
         //$record["postal_code"] = $jsonVar -> postal_code;
         //$record["floor"] = $jsonVar -> floor;
-        //$record["surface"] = $jsonVar -> surface;
+        $record["surface"] = $jsonVar -> surface;
         //$record["ground_surface"] = $jsonVar -> ground_surface;
         //$record["superficieTerrain"] = $jsonVar -> superficieTerrain;
         //$record["bedrooms_num"] = $jsonVar -> bedrooms_num;
